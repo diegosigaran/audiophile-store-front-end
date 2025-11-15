@@ -1,5 +1,5 @@
 import './styles/styles.scss';
-import { createBrowserRouter, BrowserProvider } from 'react-router';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
 function App() {
 
