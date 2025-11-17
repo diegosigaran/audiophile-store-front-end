@@ -1,9 +1,8 @@
 // Placeholder
-
 const HomePage = () => {
 
     return (
-        <div> Home Page </div>
+        <div> Home Page  </div>
     )
 
 }

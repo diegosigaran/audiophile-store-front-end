@@ -6,7 +6,7 @@ import ErrorPage from "../pages/Error404Page/Error404Page.tsx";
 import UserProfilePage from "../pages/userProfilePage/userProfilePage.tsx";
 import InventoryPage from "../pages/corporate/inventoryPage/inventoryPage.tsx";
 import DashboardPage from "../pages/corporate/dashboardPage/dashboardPage.tsx";
-import CouponPage from "../pages/corporate/couponPage/couponPage.ts";
+import CouponPage from "../pages/corporate/couponPage/couponPage.tsx";
 import OrdersPage from "../pages/corporate/orders/ordersPage.tsx";
 
 import { createBrowserRouter } from "react-router";

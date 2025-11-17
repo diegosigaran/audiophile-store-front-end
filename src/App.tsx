@@ -1,15 +1,22 @@
 import './styles/styles.scss';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { RouterProvider } from 'react-router';
+import router from './routes/routes.tsx';
+import Header from './layouts/header/header.tsx';
+import SiteGutter from './layouts/siteGutter/siteGutter.tsx';
+import Footer from './layouts/footer/footer.tsx';
 
 function App() {
 
-
-
   return (
     <>
-        <div> Testing </div>
+        <SiteGutter>
+            <Header/>
+            <RouterProvider router={router} />
+            <Footer/>
+        </SiteGutter>
     </>
   )
+
 }
 
 export default App
