@@ -1,1 +1,16 @@
 // Placeholder
+.header-container {
+  outline: red solid 2px;
+  width: 100%;
+
+  --header-height: 60px;
+
+  display: flex;
+
+  height: var(--header-height);
+
+  justify-content: space-between;
+
+  padding: 0 20px 0 20px;
+
+}
