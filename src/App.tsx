@@ -1,12 +1,27 @@
 import './styles/styles.scss';
-import { RouterProvider } from 'react-router';
-import router from './routes/routes.tsx';
-import Header from './layouts/header/header.tsx';
-import SiteGutter from './layouts/siteGutter/siteGutter.tsx';
-import Footer from './layouts/footer/footer.tsx';
 import SiteLayout from "./layouts/siteLayout/siteLayout.tsx";
+import { useEffect } from "react";
 
 function App() {
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+            const response = await fetch("http://localhost:5226/weatherforecast", {mode: "cors"});
+
+            console.log(response);
+
+        }
+
+        fetchData();
+
+
+        console.log("here");
+
+    }, [])
+
+
 
   return (
     <>
