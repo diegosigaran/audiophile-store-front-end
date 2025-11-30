@@ -1,6 +1,5 @@
 // Placeholder
 .header-container {
-  outline: red solid 5px;
   width: 100%;
 
   --header-height: 60px;
@@ -29,4 +28,24 @@
   display: flex;
 
 
+}
+
+.header-wrapper {
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-dark-color);
+
+}
+
+.header-container--left {
+
+  display: flex;
+
+}
+
+.non-desktop-menu {
+  height: 20px;
 }
