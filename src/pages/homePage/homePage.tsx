@@ -1,4 +1,6 @@
 // Placeholder
+import { useEffect, useState } from 'react';
+
 const HomePage = () => {
 
     return (

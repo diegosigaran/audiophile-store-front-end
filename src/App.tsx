@@ -1,31 +1,14 @@
 import './styles/styles.scss';
-import SiteLayout from "./layouts/siteLayout/siteLayout.tsx";
 import { useEffect } from "react";
+import { RouterProvider } from 'react-router';
+import routes from "./routes/routes.tsx";
 
 function App() {
-
-    useEffect(() => {
-
-        const fetchData = async () => {
-
-            const response = await fetch("http://localhost:5226/weatherforecast", {mode: "cors"});
-
-            console.log(response);
-
-        }
-
-        fetchData();
-
-
-        console.log("here");
-
-    }, [])
-
 
 
   return (
     <>
-      <SiteLayout />
+        <RouterProvider router={routes} />
     </>
   )
 

@@ -1,9 +1,11 @@
 // Placeholder
 .header-container {
-  outline: red solid 2px;
+  outline: red solid 5px;
   width: 100%;
 
   --header-height: 60px;
+
+  background-color: var(--primary-dark-color);
 
   display: flex;
 
@@ -12,5 +14,19 @@
   justify-content: space-between;
 
   padding: 0 20px 0 20px;
+
+}
+
+.header-container > * {
+
+  color: white;
+  font-family: "Manrope", sans-serif;
+
+}
+
+.links-container {
+
+  display: flex;
+
 
 }

@@ -1,5 +1,5 @@
 import styles from './siteLayout.module.scss'
-import { RouterProvider } from 'react-router';
+import { Outlet } from 'react-router';
 import router from '../../routes/routes.tsx'
 import Header from '../header/header.tsx';
 import SiteGutter from '../siteGutter/siteGutter.tsx';
@@ -12,7 +12,9 @@ const SiteLayout = () => {
         <div className={`${styles['site-layout-container']}`}>
             <SiteGutter>
                 <Header/>
-                <RouterProvider router={router} />
+                <main>
+                    <Outlet />
+                </main>
                 <Footer/>
             </SiteGutter>
         </div>

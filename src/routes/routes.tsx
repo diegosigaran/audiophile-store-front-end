@@ -8,43 +8,63 @@ import InventoryPage from "../pages/corporate/inventoryPage/inventoryPage.tsx";
 import DashboardPage from "../pages/corporate/dashboardPage/dashboardPage.tsx";
 import CouponPage from "../pages/corporate/couponPage/couponPage.tsx";
 import OrdersPage from "../pages/corporate/orders/ordersPage.tsx";
+import SiteLayout from "../layouts/siteLayout/siteLayout.tsx";
 
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <HomePage/>
-    },
-    {
-        path: "/home",
-        element: <HomePage />
-    },
-    {
-        path: "/checkout",
-        element: <CheckoutPage/>
-    },
-    {
-        path: "/product",
-        element: <ProductPage />
-    },
-    {
-        path: "/userProfilePage",
-        element: <UserProfilePage />
-    },
-    {
-        path: "/corporate",
+        element: <SiteLayout/>,
         children: [
-            { path: "dashboard", element: <DashboardPage /> },
-            { path: "inventory", element: <InventoryPage/> },
-            { path: "coupons", element: <CouponPage /> },
-            { path: "orders", element: <OrdersPage/> }
+            {
+                index: true,
+                path: "/home",
+                element: <HomePage />
+            },
+            {
+                path: "/checkout",
+                element: <CheckoutPage/>
+            },
+            {
+                path: "/product",
+                element: <ProductPage />
+            },
+            {
+                path: "/userProfilePage",
+                element: <UserProfilePage />
+            },
+            {
+                path: "/corporate",
+                children: [
+                    { path: "dashboard", element: <DashboardPage /> },
+                    { path: "inventory", element: <InventoryPage/> },
+                    { path: "coupons", element: <CouponPage /> },
+                    { path: "orders", element: <OrdersPage/> }
+                ]
+            },
+            {
+                path: "*",
+                element: <ErrorPage/>
+            }
         ]
     },
-    {
-        path: "*",
-        element: <ErrorPage/>
-    }
+
 ])
+
+// const router = createBrowserRouter([
+//     {
+//         path: "/",
+//         element: <CoreLayout/>,
+//         children: [
+//             { index: true, element: <HomePage/> },
+//             { path: "home", element: <HomePage/> },
+//             { path: "catalog", element: <CatalogPage/> },
+//             { path: "enrollment", element: <EnrollmentPage /> },
+//             { path: "faq", element: <FaqPage />},
+//             { path: "*", element: <HomePage/> }
+//         ]
+//     }
+// ])
 
 export default router;
