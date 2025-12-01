@@ -1,38 +1,36 @@
 // Placeholder
 .header-container {
   width: 100%;
-
-  --header-height: 60px;
+  --header-height: 97px;
 
   background-color: var(--primary-dark-color);
-
   display: flex;
 
   height: var(--header-height);
-
   justify-content: space-between;
-
   padding: 0 20px 0 20px;
 
 }
 
-.header-container > * {
+.header-container button {
 
-  color: white;
-  font-family: "Manrope", sans-serif;
+  background-color: unset;
+  border: none;
 
 }
 
+.header-container > * {
+  color: white;
+  font-family: "Manrope", sans-serif;
+}
+
 .links-container {
-
   display: flex;
-
-
 }
 
 .header-wrapper {
 
-  width: 100%;
+  width: 100vw;
 
   display: flex;
   justify-content: center;
@@ -41,11 +39,35 @@
 }
 
 .header-container--left {
-
   display: flex;
-
+  height: 100%;
+  align-items: center;
 }
 
 .non-desktop-menu {
   height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-container {
+  display: flex;
+  height: calc(var(--header-height) * 0.25);
+}
+
+.desktop-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.view-cart-btn {
+  background-color: unset;
+  border: none;
+}
+
+.header-options-container {
+
+  display: flex;
+
 }
