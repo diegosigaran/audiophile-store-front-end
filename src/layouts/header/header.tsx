@@ -1,11 +1,9 @@
 // Placeholder
 import styles from './header.module.scss';
 // import { useState } from 'react'; // Will eventually need to track if someone is logged in
-import PageGutter from "../pageGutter/pageGutter.tsx";
-import { useState } from 'react';
-// import { Link } from 'react-router';
+import SiteGutter from "../siteGutter/siteGutter.tsx";
+import { Link } from 'react-router';
 import { ViewportType } from "../../assets/data/constants/viewport.ts";
-import MenuIcon from "../../assets/icons/menu.svg";
 import { mdiMenu } from "@mdi/js";
 import AudiophileLogo from "../../assets/images/audiophile_logo.png";
 import Icon from '@mdi/react';
@@ -20,7 +18,7 @@ const Header = () => {
     return (
         <>
             <div className={`${styles['header-wrapper']}`}>
-                    <PageGutter>
+                    <SiteGutter>
                         <div className={`${styles['header-container']}`}>
                             <div className={`${styles['header-container--left']}`}>
                                 {
@@ -32,20 +30,18 @@ const Header = () => {
                             {
                                 widthType == ViewportType.desktop &&
                                 <nav className={`${styles['desktop-header-nav']}`}>
-                                    {/*<Link to="/home" > Home </Link>*/}
-                                    <div> HOME </div>
-                                    <div> HEADPHONES </div>
-                                    <div> SPEAKERS </div>
-                                    <div> EARPHONES </div>
+                                    <Link to="/home" > HOME </Link>
+                                    <Link to={'/products/headphones'}> HEADPHONES </Link>
+                                    <Link to={'/products/speakers'}> SPEAKERS </Link>
+                                    <Link to={'/products/earphones'}> EARPHONES </Link>
                                 </nav>
                             }
                             <div className={`${styles['header-options-container']}`}>
                                 <button className={`${styles['view-cart-btn']} logo`}> <Icon path={mdiCartOutline} color={'white'} size={1} /> </button>
                                 { widthType == ViewportType.desktop && <button className={`${styles['view-cart-btn']} logo`}> <Icon path={mdiAccount} color={'white'} size={1} /> </button> }
                             </div>
-
                         </div>
-                    </PageGutter>
+                    </SiteGutter>
             </div>
         </>
     )

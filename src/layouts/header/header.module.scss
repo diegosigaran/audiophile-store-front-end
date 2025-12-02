@@ -71,3 +71,12 @@
   display: flex;
 
 }
+
+.desktop-header-nav > * {
+  text-decoration: none;
+  color: unset;
+}
+
+.desktop-header-nav > *:visited {
+  color: unset;
+}

@@ -10,13 +10,25 @@ import CouponPage from "../pages/corporate/couponPage/couponPage.tsx";
 import OrdersPage from "../pages/corporate/orders/ordersPage.tsx";
 import SiteLayout from "../layouts/siteLayout/siteLayout.tsx";
 
-import { createBrowserRouter } from "react-router";
+import {createBrowserRouter, Navigate} from "react-router";
+
+const redirectList = [
+    { from: "/speakers", to: "/products/speakers" },
+    { from: "/headphones", to: "/products/headphones" },
+    { from: "/earphones", to: "/products/earphones" },
+]
+
+const redirectRoutes = redirectList.map(({from, to}) => ({
+    path: from,
+    element: <Navigate to={to} />,
+}));
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <SiteLayout/>,
         children: [
+            ...redirectRoutes,
             {
                 index: true,
                 path: "/home",
@@ -52,19 +64,5 @@ const router = createBrowserRouter([
 
 ])
 
-// const router = createBrowserRouter([
-//     {
-//         path: "/",
-//         element: <CoreLayout/>,
-//         children: [
-//             { index: true, element: <HomePage/> },
-//             { path: "home", element: <HomePage/> },
-//             { path: "catalog", element: <CatalogPage/> },
-//             { path: "enrollment", element: <EnrollmentPage /> },
-//             { path: "faq", element: <FaqPage />},
-//             { path: "*", element: <HomePage/> }
-//         ]
-//     }
-// ])
 
 export default router;

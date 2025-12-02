@@ -1,10 +1,12 @@
+import HeroSection from "./heroSection/heroSection.tsx";
 // Placeholder
-import { useEffect, useState } from 'react';
-
 const HomePage = () => {
 
     return (
-        <div> Home Page  </div>
+        <div>
+            <HeroSection />
+            <div> Home Page  </div>
+        </div>
     )
 
 }
