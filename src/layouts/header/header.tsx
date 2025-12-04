@@ -3,7 +3,6 @@ import styles from './header.module.scss';
 // import { useState } from 'react'; // Will eventually need to track if someone is logged in
 import SiteGutter from "../siteGutter/siteGutter.tsx";
 import { Link } from 'react-router';
-import { ViewportType } from "../../assets/data/constants/viewport.ts";
 import { mdiMenu } from "@mdi/js";
 import AudiophileLogo from "../../assets/images/audiophile_logo.png";
 import Icon from '@mdi/react';
@@ -13,22 +12,26 @@ import useViewportWidth from "../../hooks/useViewportWidth.tsx";
 
 const Header = () => {
 
-    const widthType = useViewportWidth();
+    const { isDesktopViewport } = useViewportWidth();
 
     return (
         <>
             <div className={`${styles['header-wrapper']}`}>
                     <SiteGutter>
                         <div className={`${styles['header-container']}`}>
+
+                            {/*      Logo & Sidebar Menu Button          */}
                             <div className={`${styles['header-container--left']}`}>
                                 {
-                                    widthType != ViewportType.desktop &&
+                                    !isDesktopViewport &&
                                     <button className={`${styles['non-desktop-menu']}`}> <Icon path={mdiMenu} color={'white'} size={1} /> </button>
                                 }
-                                <div className={`${styles['header-logo-container']} logo`}> <img src={AudiophileLogo} alt={"Welcome to Audiophile"} /> </div>
+                                <div className={`${styles['header-logo-container']} logo`}> <Link to={"/home"}><img src={AudiophileLogo} alt={"Welcome to Audiophile"} />  </Link> </div>
                             </div>
+
+                            {/*    Desktop Nav Links    */}
                             {
-                                widthType == ViewportType.desktop &&
+                                isDesktopViewport &&
                                 <nav className={`${styles['desktop-header-nav']}`}>
                                     <Link to="/home" > HOME </Link>
                                     <Link to={'/products/headphones'}> HEADPHONES </Link>
@@ -36,9 +39,11 @@ const Header = () => {
                                     <Link to={'/products/earphones'}> EARPHONES </Link>
                                 </nav>
                             }
+
+                            {/*     Cart and Probile Buttons         */}
                             <div className={`${styles['header-options-container']}`}>
                                 <button className={`${styles['view-cart-btn']} logo`}> <Icon path={mdiCartOutline} color={'white'} size={1} /> </button>
-                                { widthType == ViewportType.desktop && <button className={`${styles['view-cart-btn']} logo`}> <Icon path={mdiAccount} color={'white'} size={1} /> </button> }
+                                { isDesktopViewport && <button className={`${styles['view-cart-btn']} logo`}> <Icon path={mdiAccount} color={'white'} size={1} /> </button> }
                             </div>
                         </div>
                     </SiteGutter>

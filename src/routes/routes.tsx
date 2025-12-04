@@ -31,6 +31,9 @@ const router = createBrowserRouter([
             ...redirectRoutes,
             {
                 index: true,
+                element: <HomePage />
+            },
+            {
                 path: "/home",
                 element: <HomePage />
             },
