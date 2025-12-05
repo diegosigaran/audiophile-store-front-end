@@ -1,1 +1,43 @@
 // placeholder
+.hero-section-container {
+
+  display: flex;
+  background-color: var(--tertiary-dark-color);
+
+  font-family: Manrope, sans-serif;
+
+  justify-content: space-between;
+
+}
+
+.hero-section-information {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  --padding: 5%;
+
+  padding: 0 var(--padding) 0 0;
+  width: calc(50%);
+
+}
+
+.hero-section-information > * {
+  color: var(--primary-light-color);
+}
+
+.sub-title {
+
+}
+
+.product-title {
+
+  font-size: var(--font-56);
+  font-weight: bold;
+
+}
+
+
+

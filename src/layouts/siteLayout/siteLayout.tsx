@@ -9,13 +9,11 @@ const SiteLayout = () => {
     return (
 
         <div className={`${styles['site-layout-container']}`}>
-            <SiteGutter>
                 <Header/>
                 <main>
                     <Outlet />
                 </main>
                 <Footer/>
-            </SiteGutter>
         </div>
 
     )

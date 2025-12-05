@@ -57,15 +57,24 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
 
-  --primary-theme-color: #D87D4A;
-  --secondary-theme-color: #D87D4A;
+  --primary-theme-color: #D87D4A; // Need to determine how to add the image with a 'fog mask', similar to the actual design.
+  --secondary-theme-color: #FBAF85;
 
   --primary-dark-color: #101010;
   --secondary-dark-color: #000000;
+  --tertiary-dark-color: #131313;
 
   --primary-light-color: #FFFFFF;
   --secondary-light-color: #F1F1F1;
   --tertiary-light-color: #FAFAFA;
+
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.5rem;
+  --font-xl: 1.5rem;
+
+  --font-56: 3.5rem;
 
 }
 
