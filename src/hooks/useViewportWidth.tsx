@@ -31,7 +31,7 @@ const useViewportWidth = () => {
 
     useEffect(() => {
 
-        if(windowSizeObj.width < ViewportBreakpoints.mobile) {
+        if(windowSizeObj.width <= ViewportBreakpoints.mobile) {
             dispatch({ type: "mobile" })
         } else if(windowSizeObj.width > ViewportBreakpoints.mobile && windowSizeObj.width < ViewportBreakpoints.desktop) {
             dispatch({ type: "tablet" })
