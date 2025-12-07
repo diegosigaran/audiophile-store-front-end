@@ -1,5 +1,13 @@
+@use '/src/styles/viewports.scss' as viewport;
+
 .page-gutter {
+
     width: 80%;
+
+    @media (max-width: viewport.$desktop) {
+      width: 100%;
+    }
+
     display: flex;
     justify-content: center;
 }

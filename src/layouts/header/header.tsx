@@ -34,10 +34,10 @@ const Header = () => {
                             {
                                 isDesktopViewport &&
                                 <nav className={`${styles['desktop-header-nav']}`}>
-                                    <Link to="/home" > HOME </Link>
-                                    <Link to={'/products/headphones'}> HEADPHONES </Link>
-                                    <Link to={'/products/speakers'}> SPEAKERS </Link>
-                                    <Link to={'/products/earphones'}> EARPHONES </Link>
+                                    <Link to="/home" className={`${'link-underline'}`}> HOME </Link>
+                                    <Link to={'/products/headphones'} className={`${'link-underline'}`}> HEADPHONES </Link>
+                                    <Link to={'/products/speakers'} className={`${'link-underline'}`}> SPEAKERS </Link>
+                                    <Link to={'/products/earphones'} className={`${'link-underline'}`}> EARPHONES </Link>
                                 </nav>
                             }
 

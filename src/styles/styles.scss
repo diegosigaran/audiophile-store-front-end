@@ -5,6 +5,9 @@
 //            font-style: normal;
 // }
 
+@use "/src/styles/viewports.scss";
+
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -75,7 +78,59 @@ h1, h2, h3, h4, h5, h6 {
   --font-xl: 1.5rem;
 
   --font-56: 3.5rem;
+  --font-48: 3rem;
+  --font-32: 2rem;
+  --font-24: 1.5rem;
 
+}
+
+.link-underline {
+
+  &:after {
+    display: block;
+    content: '';
+    width: 100%;
+    transform: scaleY(0);
+    height: 5px;
+    transition: transform 750ms;
+  }
+
+  &:hover::after {
+    transform: scaleY(1);
+    background-color: var(--primary-light-color);
+  }
+
+}
+
+.btn-primary {
+
+  background-color: var(--primary-theme-color);
+
+  @media (min-width: viewports.$desktop) {
+    font-size: var(--font-xs);
+
+  }
+
+  @media (max-width: viewports.$desktop) and (min-width: viewports.$tablet) {
+
+
+
+  }
+
+  width: 160px;
+  height: 48px;
+
+  transition: background-color 500ms;
+
+}
+
+.btn-primary a {
+  color: var(--primary-light-color);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-theme-color);
 }
 
 //.manrope-bold {
