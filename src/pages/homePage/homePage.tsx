@@ -1,6 +1,8 @@
 import HeroSection from "./heroSection/heroSection.tsx";
 import CategorySelector from "./categorySelector/categorySelector.tsx";
 import styles from "./homePage.module.scss";
+import SiteGutter from "../../layouts/siteLayout/siteLayout.tsx";
+
 // Placeholder
 const HomePage = () => {
 

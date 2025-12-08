@@ -2,6 +2,7 @@
 import styles from './header.module.scss';
 // import { useState } from 'react'; // Will eventually need to track if someone is logged in
 import SiteGutter from "../siteGutter/siteGutter.tsx";
+import PageGutter from "../pageGutter/pageGutter.tsx";
 import { Link } from 'react-router';
 import { mdiMenu } from "@mdi/js";
 import AudiophileLogo from "../../assets/images/audiophile_logo.png";
@@ -18,7 +19,7 @@ const Header = () => {
         <>
 
             <div className={`${styles['header-wrapper']}`}>
-                    <SiteGutter>
+                    <PageGutter>
                         <div className={`${styles['header-container']}`}>
 
                             {/*      Logo & Sidebar Menu Button          */}
@@ -47,7 +48,7 @@ const Header = () => {
                                 { isDesktopViewport && <button className={`${styles['view-cart-btn']} logo`}> <Icon path={mdiAccount} color={'white'} size={1} /> </button> }
                             </div>
                         </div>
-                    </SiteGutter>
+                    </PageGutter>
             </div>
         </>
     )

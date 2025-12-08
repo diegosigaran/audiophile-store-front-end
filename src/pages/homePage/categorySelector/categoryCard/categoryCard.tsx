@@ -24,6 +24,7 @@ const CategoryCard = ({ image, categoryName, link }) =>{
             <div className={`${styles['category-card-content']}`}>
                 <img ref={cardImage} src={image} alt={categoryName} />
                 <div> { categoryName} </div>
+                <div> SHOP </div>
             </div>
             <div className={`${styles['category-card-pseudo']}`}></div>
 
