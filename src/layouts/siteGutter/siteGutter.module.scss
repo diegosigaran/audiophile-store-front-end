@@ -1,6 +1,8 @@
+@use '/src/styles/data/layoutData.scss' as layout;
+
 .site-gutter {
   width: 100%;
-  max-width: 1440px;
+  max-width: layout.$siteGutterWidth;
 
   display: flex;
   flex-direction: column;

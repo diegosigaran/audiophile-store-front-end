@@ -1,8 +1,9 @@
-@use '/src/styles/viewports.scss' as viewport;
+@use '/src/styles/data/viewportBreakpoints.scss' as viewport;
+@use '/src/styles/data/layoutData.scss' as layout;
 
 .page-gutter {
 
-    width: 1110px;
+    width: layout.$pageGutterWidth;
 
     @media (max-width: viewport.$desktop) {
       width: 100%;

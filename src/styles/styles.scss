@@ -5,7 +5,7 @@
 //            font-style: normal;
 // }
 
-@use "/src/styles/viewports.scss";
+@use "/src/styles/data/viewportBreakpoints" as viewport;
 
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -106,12 +106,12 @@ h1, h2, h3, h4, h5, h6 {
 
   background-color: var(--primary-theme-color);
 
-  @media (min-width: viewports.$desktop) {
+  @media (min-width: viewport.$desktop) {
     font-size: var(--font-xs);
 
   }
 
-  @media (max-width: viewports.$desktop) and (min-width: viewports.$tablet) {
+  @media (max-width: viewport.$desktop) and (min-width: viewport.$tablet) {
 
 
 
