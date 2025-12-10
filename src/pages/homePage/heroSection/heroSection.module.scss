@@ -1,4 +1,5 @@
 @use "/src/styles/data/viewportBreakpoints" as viewport;
+@use "/src/styles/data/layoutData.scss" as layout;
 
 .hero-section-container {
 
@@ -73,7 +74,6 @@
     gap: calc(var(--gap) * 1.5);
   }
 
-
   .product-title {
     font-size: var(--font-32);
     font-weight: bold;
@@ -89,13 +89,22 @@
 
 }
 
+@media (max-width: #{layout.$siteGutterWidth}) and (min-width: #{viewport.$desktop}) {
+
+  // TODO: See if you can make this work dynamically with SCSS variables
+  .hero-section-container {
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+
+}
+
 @media (max-width: viewport.$desktop) {
 
   .hero-section-container {
     width: 100vw;
     height: 100vw;
     justify-content: center;
-
   }
 
   .hero-section-information {
