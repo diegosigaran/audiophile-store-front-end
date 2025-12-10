@@ -10,9 +10,9 @@ const CategoryCard = ({ image, categoryName, link }) =>{
 
         if(cardImage.current && card.current) {
 
-            const cardHeight = card.current.offsetHeight;
+            // const cardHeight = card.current.offsetHeight;
 
-            cardImage.current.style.height = ( cardHeight / 2 )+ 'px';
+            // cardImage.current.style.height = ( cardHeight / 2 )+ 'px';
 
         }
 
@@ -23,8 +23,11 @@ const CategoryCard = ({ image, categoryName, link }) =>{
         <div ref={card} className={`${styles['category-card-container']}`}>
             <div className={`${styles['category-card-content']}`}>
                 <img ref={cardImage} src={image} alt={categoryName} />
-                <div> { categoryName} </div>
-                <div> SHOP </div>
+                <div className={`${styles['category-card-text']}`}>
+                    <div> { categoryName} </div>
+                    <div> SHOP </div>
+                </div>
+
             </div>
             <div className={`${styles['category-card-pseudo']}`}></div>
 
