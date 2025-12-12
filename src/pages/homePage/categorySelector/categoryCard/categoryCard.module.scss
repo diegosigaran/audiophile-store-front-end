@@ -8,6 +8,9 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
+
+  font-family: Manrope, sans-serif;
+
 }
 
 .category-card-content {
@@ -33,6 +36,10 @@
 
 .category-card-text {
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
 
@@ -48,3 +55,37 @@
   border-radius: 8px;
 
 }
+
+@keyframes rotate-180-clockwise {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+
+}
+
+.category-name {
+
+  font-size: var(--font-lg);
+  font-weight: bold;
+
+}
+
+.shop-link::after {
+  content: ">";
+  display: inline-block;
+  color: var(--primary-theme-color);
+  font-size: var(--font-lg);
+}
+
+.shop-link:hover::after {
+  color: var(--primary-dark-color);
+  font-size: var(--font-lg);
+  animation: rotate-180-clockwise 500ms linear forwards;
+}
+
+
