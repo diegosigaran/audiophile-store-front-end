@@ -1,6 +1,9 @@
+@use '/src/styles/data/viewportBreakpoints' as viewport;
+//@use '/src/styles/data/'
+
 .category-card-container {
 
-  width: 30%;
+  width: 32%;
   gap: 10px;
   aspect-ratio: 1 / 1;
   display: flex;
@@ -42,6 +45,7 @@
   align-items: center;
   position: absolute;
   bottom: 0;
+  padding-bottom: 5%;
 
 }
 
@@ -63,7 +67,43 @@
   }
 
   to {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
+  }
+
+}
+
+@keyframes rotate-180-clockwise-reverse {
+
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+
+}
+
+@keyframes bounce {
+
+  from {
+    transform: rotate(180deg) translateY(0);
+  }
+
+  25% {
+    transform: rotate(180deg) translateY(2px);
+  }
+
+  50% {
+    transform: rotate(180deg) translateY(0);
+  }
+
+  75% {
+    transform: rotate(180deg) translateY(2px);
+  }
+
+  to {
+    transform: rotate(180deg) translateY(0);
   }
 
 }
@@ -72,6 +112,7 @@
 
   font-size: var(--font-lg);
   font-weight: bold;
+  cursor: pointer;
 
 }
 
@@ -82,10 +123,23 @@
   font-size: var(--font-lg);
 }
 
-.shop-link:hover::after {
-  color: var(--primary-dark-color);
-  font-size: var(--font-lg);
-  animation: rotate-180-clockwise 500ms linear forwards;
+.shop-link {
+  cursor: pointer;
 }
+
+.rotate-180-clockwise-reverse-selector::after {
+  animation: rotate-180-clockwise-reverse 150ms linear forwards;
+}
+
+.rotate-180-clockwise-selector::after {
+    animation: rotate-180-clockwise 150ms linear forwards, bounce 1000ms linear infinite;
+    animation-delay: 0ms, 150ms;
+}
+//
+//@media (max-width: ) {
+//
+//
+//
+//}
 
 
